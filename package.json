@@ -1,7 +1,7 @@
 {
-  "name": "webpackboilerplate",
+  "name": "weather-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Для того чтобы создать оптимизированные файлы для хостинга, необходимо выполнить следующую команду. В корне проекта появится папка `dist` со всеми оптимизированными ресурсами.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "Yaroslav Kuzero",
-  "license": "ISC",
+  "license": "MIT",
   "browserslist": [
     "last 3 versions",
     "not dead"
@@ -37,5 +37,13 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaroslavKuzero/PetProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YaroslavKuzero/PetProject/issues"
+  },
+  "homepage": "https://github.com/YaroslavKuzero/PetProject#readme"
 }

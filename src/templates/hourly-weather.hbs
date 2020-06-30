@@ -1,0 +1,16 @@
+{{#each this}}
+<div class="hourly-box">
+  <div class="hourly__time"><span>{{dt}}</span></div>
+  <div class="hourly__date"><span>{{dd}}</span></div>
+  <div class="hourly__weather"><img src={{weather.icon}} alt={{weather.main}} /></div>
+  <div class="hourly__temperature">Current t˚: <span>{{temp}}</span></div>
+  <div class="hourly__feelslike">Feels Like t˚: <span>{{feels_like}}</span></div>
+  <div class="hourly__pressure">Pressure: <span>{{pressure}}</span></div>
+  <div class="hourly__humidity">Humidity: <span>{{humidity}}</span></div>
+  <div class="hourly__dew-point">Dew point: <span>{{dew_point}}</span></div>
+  <div class="hourly__windspeed">
+    Wind speed: <span>{{wind_speed}}</span>
+    <div class="current__wind-dir">{{wind_deg}}</div>
+  </div>
+</div>
+{{/each}}
