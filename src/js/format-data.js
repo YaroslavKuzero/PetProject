@@ -15,7 +15,7 @@ const current = {
   dew_point: `${currentData.dew_point}`,
   visibility: `${currentData.visibility} m`,
   wind_speed: `${currentData.wind_speed} m/s`,
-  wind_deg: `${currentData.wind_deg}˚`,
+  wind_deg: `${currentData.wind_deg}`,
   weather: {
     main: `${currentData.weather[0].main}`,
     icon: `http://openweathermap.org/img/wn/${currentData.weather[0].icon}@2x.png`,
@@ -34,7 +34,7 @@ dailyData.forEach(item => {
     humidity: `${item.humidity} %`,
     dew_point: `${item.dew_point}`,
     wind_speed: `${item.wind_speed} m/s`,
-    wind_deg: `${item.wind_deg}˚`,
+    wind_deg: `${item.wind_deg}`,
     weather: {
       main: `${item.weather[0].main}`,
       icon: `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`,
@@ -57,7 +57,7 @@ hourlyData.forEach(item => {
     humidity: `${item.humidity} %`,
     dew_point: `${item.dew_point}`,
     wind_speed: `${item.wind_speed} m/s`,
-    wind_deg: `${item.wind_deg}˚`,
+    wind_deg: `${item.wind_deg}`,
     weather: {
       main: `${item.weather[0].main}`,
       icon: `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`,

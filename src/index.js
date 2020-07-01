@@ -5,27 +5,20 @@ import btns from './templates/date-btns.hbs';
 import hrly from './templates/hourly-weather.hbs';
 import logo from './templates/logo.hbs';
 import { current, daily, hourly } from './js/format-data';
+import refs from './js/refs';
 
-const refs = {
-  root: document.querySelector('.root'),
-  current: document.querySelector('.current'),
-  daily: document.querySelector('.daily__wrapper'),
-  hourly: document.querySelector('.hourly'),
-  btns: document.querySelector('.btn-box'),
-}
-
-const markupCurrent = curr(current);
-refs.current.insertAdjacentHTML("beforeend", markupCurrent);
-const markupDaily = day(daily);
-refs.daily.insertAdjacentHTML("beforeend", markupDaily);
+// const markupCurrent = curr(current);
+refs.current.insertAdjacentHTML("beforeend", curr(current));
+// const markupDaily = day(daily);
+refs.daily.insertAdjacentHTML("beforeend", day(daily));
 refs.daily.firstElementChild.classList.add('tab--active')
-const markupBtns = btns(daily);
-refs.btns.insertAdjacentHTML('beforeend', markupBtns);
+// const markupBtns = btns(daily);
+refs.btns.insertAdjacentHTML('beforeend', btns(daily));
 refs.btns.firstElementChild.classList.add('daily--active');
-const markupHourly = hrly(hourly);
-refs.hourly.insertAdjacentHTML('beforeend', markupHourly);
-const markupLogo = logo();
-refs.root.insertAdjacentHTML('afterbegin', markupLogo);
+// const markupHourly = hrly(hourly);
+refs.hourly.insertAdjacentHTML('beforeend', hrly(hourly));
+// const markupLogo = logo();
+refs.root.insertAdjacentHTML('afterbegin', logo());
 
 const tabSwitcher = function (event) {
   event.preventDefault();
