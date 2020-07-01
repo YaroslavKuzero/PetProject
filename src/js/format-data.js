@@ -6,8 +6,8 @@ const hourlyData = [...data.hourly];
 
 const current = {
   dt: `${getDate(Date.now())}`,
-  sunrise: `${getTime(currentData.sunrise)} LT`,
-  sunset: `${getTime(currentData.sunset)} LT`,
+  sunrise: `${getTime(currentData.sunrise * 1000)} LT`,
+  sunset: `${getTime(currentData.sunset * 1000)} LT`,
   temp: `${Math.round(currentData.temp)} ˚C`,
   feels_like: `${Math.round(currentData.feels_like)} ˚C`,
   pressure: `${currentData.pressure} hpa`,
@@ -27,7 +27,7 @@ dailyData.forEach(item => {
   const dailyItem = {
     dt: `${getShortDate(item.dt * 1000)}`,
     sunrise: `${getTime(item.sunrise * 1000)} LT`,
-    sunset: `${getTime(item.sunset)} LT`,
+    sunset: `${getTime(item.sunset * 1000)} LT`,
     temp: `${Math.round(item.temp.day)} ˚C`,
     feels_like: `${Math.round(item.feels_like.day)} ˚C`,
     pressure: `${item.pressure} hpa`,
