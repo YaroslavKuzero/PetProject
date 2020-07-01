@@ -14,7 +14,6 @@ body {
 }
 
 .current,
-.daily,
 .hourly {
   background-color: rgba(100, 100, 100, 0.6);
 }
@@ -39,8 +38,32 @@ body {
   flex-grow: 1;
 }
 
+.daily-box {
+  background-color: rgba(100, 100, 100, 0.6);
+  display: none;
+}
+
+.tab--active {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
 .dbtn {
+  display: block;
+  padding: 10px;
+  text-align: center;
   flex-grow: 1;
+  text-decoration: none;
+  color: #888;
+  background-color: rgba(100, 100, 100, 0);
+}
+.daily--active {
+  background-color: rgba(100, 100, 100, 0.6);
+  color: #ccc;
+  text-shadow: #000 5px 5px 10px;
+  font-weight: bold;
 }
 
 .daily__wrapper {

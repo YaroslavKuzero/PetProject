@@ -1,5 +1,5 @@
 {{#each this}}
-<div class="daily-box">
+<div class="daily-box" id=daily-{{@index}}>
   <div class="daily__date"></div>
   <div class="daily__weather"><img src={{weather.icon}} alt={{weather.main}} /></div>
   <div class="daily__sunrise">Sunrise at: <span>{{sunrise}}</span></div>
