@@ -1,0 +1,46 @@
+.daily {
+  grid-column-start: 6;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 7;
+}
+
+.btn-box {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  height: 10%;
+}
+
+.daily-box {
+  background-color: rgba(100, 100, 100, 0.6);
+  display: none;
+}
+
+.tab--active {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.dbtn {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  flex-grow: 1;
+  text-decoration: none;
+  color: #888;
+  background-color: rgba(100, 100, 100, 0);
+}
+.daily--active {
+  background-color: rgba(100, 100, 100, 0.6);
+  color: #ccc;
+  text-shadow: #000 5px 5px 10px;
+  font-weight: bold;
+}
+
+.daily__wrapper {
+  display: flex;
+  height: 90%;
+}
