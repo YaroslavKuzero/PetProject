@@ -5,6 +5,7 @@ const webpack = require("webpack");
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const svgToMiniDataURI = require('mini-svg-data-uri');
+const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 module.exports = env => {
   return {
@@ -82,6 +83,7 @@ module.exports = env => {
       new webpack.ProgressPlugin(),
       new FriendlyErrorsWebpackPlugin(),
       new OptimizeCssAssetsPlugin(),
+      new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
       new HtmlWebpackPlugin({ template: './src/index.html', })],
   }
 };

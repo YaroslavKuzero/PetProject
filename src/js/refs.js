@@ -1,4 +1,5 @@
 const refs = {
+  body: document.querySelector('body'),
   root: document.querySelector('.root'),
   current: document.querySelector('.current'),
   daily: document.querySelector('.daily__wrapper'),
