@@ -5,8 +5,8 @@
   "timezone_offset": 10800,
   "current": {
     "dt": 1592992633,
-    "sunrise": 1592963810,
-    "sunset": 1593020827,
+    "sunrise": 1593741360,
+    "sunset": 1593798420,
     "temp": 24.11,
     "feels_like": 20.76,
     "pressure": 1013,
@@ -20,7 +20,7 @@
     "weather": [
       {
         "id": 211,
-        "main": "Thunderstorm",
+        "main": "Drizzle",
         "description": "thunderstorm",
         "icon": "11d"
       }

@@ -353,3 +353,43 @@ const svgToMiniDataURI = require('mini-svg-data-uri');
   ],
 },
 ```
+
+42. Install plugin for minimize images:
+
+```shell
+ npm install imagemin-webpack-plugin --save-dev
+```
+
+43. Add rules to 'webpack.config.js':
+
+```JavaScript
+const ImageminPlugin = require('imagemin-webpack-plugin').default
+
+plugins: [
+  new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
+  ]
+```
+
+44. Install axios library for http requests:
+
+```shell
+npm install axios --save-dev
+```
+
+45. Install throttle-debounce for delaying functions:
+
+```shell
+npm install throttle-debounce --save-dev
+```
+
+46. Install [react](https://uk.reactjs.org) and react-dom:
+
+```shell
+npm install react react-dom --save-dev
+```
+
+47. Install prop-types checking for React props and similar objects:
+
+```shell
+npm install prop-types --save-dev
+```

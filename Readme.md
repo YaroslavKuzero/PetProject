@@ -31,3 +31,12 @@ npm run build
 ```shell
 npm start
 ```
+
+### Axios
+
+Установлена библиотека [AXIOS](https://github.com/axios/axios).
+
+### Throttle-debounce
+
+Также можно использовать throttle и debounce.
+[Throttle and debounce functions.](https://github.com/niksy/throttle-debounce#readme)
