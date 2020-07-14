@@ -1,0 +1,35 @@
+.btn-box {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  height: 10%;
+}
+
+.daily--active {
+  background-color: rgba(200, 200, 200, 0.4);
+  box-shadow: 3px 0px 0px 0px rgba(0, 0, 0, 0.75);
+
+  color: #ccc;
+  text-shadow: #000 5px 5px 10px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dbtn-item {
+  position: relative;
+  flex-grow: 1;
+}
+
+.dbtn {
+  display: block;
+  height: 100%;
+  padding-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  background-color: rgba(100, 100, 100, 0);
+}

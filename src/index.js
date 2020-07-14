@@ -1,7 +1,8 @@
-// import './styles.scss';
+import './styles.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import backgroundChange from './js/backgroundChange'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,4 +22,4 @@ ReactDOM.render(
 
 // refs.btns.addEventListener('click', tabSwitcher);
 
-// backgroundChange();
+backgroundChange();

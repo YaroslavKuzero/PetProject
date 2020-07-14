@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
-import './Aps.css';
-import Container from './templates/Container/Container';
-import Current from './templates/Current/Current';
+import './App.css';
+import Container from './components/Container/Container';
+import Current from './components/Current/Current';
+import Daily from './components/Daily/Daily';
+import Hourly from './components/Hourly/Hourly';
+import Logo from './components/Logo/Logo';
+import Tabis from './components/Tabs/Tabs';
 
 
 class App extends Component {
 
   render() {
     return (
-      <Container>
-        <Current />
-      </Container>
+      <>
+        <Logo />
+        <Container>
+          <Current />
+          <Daily />
+          <Hourly />
+        </Container>
+      </>
     );
   }
 }
