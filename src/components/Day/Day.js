@@ -13,7 +13,7 @@ const Day = ({ day }) => {
         <div className="dayt"><i className="wi wi-thermometer"></i><span>{day.temp}</span></div>
       </div>
       <div className="daily__feelslike">
-        <div className="fday">Feels Like<span>{day.feels_like}</span></div>
+        <div className="fday">Feels Like <span>{day.feels_like}</span></div>
       </div>
       <div className="daily__pressure"><i className="wi wi-barometer"></i><span>{day.pressure}</span></div>
       <div className="daily__humidity"><i className="wi wi-humidity"></i><span>{day.humidity}</span></div>

@@ -13,7 +13,7 @@ class Hourly extends Component {
             <div className="hourly__date"><span>{hour.dd}</span></div>
             <div className="hourly__weather"><img src={hour.weather.icon} alt={hour.weather.main} /></div>
             <div className="hourly__temperature"><i className="wi wi-thermometer"></i><span>{hour.temp}</span></div>
-            <div className="hourly__feelslike">Feels Like<span>{hour.feels_like}</span></div>
+            <div className="hourly__feelslike">Feels Like <span>{hour.feels_like}</span></div>
             <div className="hourly__pressure"><i className="wi wi-barometer"></i><span>{hour.pressure}</span></div>
             <div className="hourly__humidity"><i className="wi wi-humidity"></i><span>{hour.humidity}</span></div>
             <div className="hourly__dew-point"><i className="wi wi-raindrop"></i><span>{hour.dew_point}</span></div>
