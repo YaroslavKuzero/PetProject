@@ -1,9 +1,9 @@
 import React from 'react';
 import "./Button.scss";
 
-const Button = ({ day }) => {
+const Button = ({ name }) => {
   return (
-    <a className="dbtn" href={'#daily-' + day.dt}>{day.dt}</a>
+    <a className="dbtn" href={'#daily-' + name}>{name}</a>
   )
 }
 

@@ -13,7 +13,7 @@ class Daily extends Component {
         <div className="btn-box">
           {daily.map((day, index) => {
             return (
-              <TabLink className="dbtn-item" activeClassName="daily--active" to={'tab' + index} key={shortid.generate()}><Button day={day} /></TabLink>)
+              <TabLink className="dbtn-item" activeClassName="daily--active" to={'tab' + index} key={shortid.generate()}><Button name={day.dt} /></TabLink>)
           })}
         </div>
         {daily.map((day, index) => {
