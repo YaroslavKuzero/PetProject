@@ -90,3 +90,4 @@ module.exports = env => {
       new HtmlWebpackPlugin({ template: './src/index.html', })],
   }
 };
+

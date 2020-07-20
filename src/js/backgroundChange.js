@@ -9,9 +9,7 @@ import day_gale from '../images/day_gale.JPG';
 import day_hot from '../images/day_hot.JPG';
 import day_rain from '../images/day_rain.JPG';
 import day_snow from '../images/day_snow.JPG';
-import day_sunny from '../images/day_sunny.JPG';
 import day_thunderstorm from '../images/day_thunderstorm.JPG';
-import day_wind from '../images/day_wind.JPG';
 import night_clear from '../images/night_clear.JPG';
 import night_cloudy from '../images/night_cloudy.JPG';
 import night_drizzle from '../images/night_drizzle.JPG';
@@ -21,12 +19,26 @@ import night_gale from '../images/night_gale.JPG';
 import night_rain from '../images/night_rain.JPG';
 import night_snow from '../images/night_snow.JPG';
 import night_thunderstorm from '../images/night_thunderstorm.JPG';
-import night_wind from '../images/night_wind.JPG';
 
 
 const now = Date.now();
-
+console.log(now);
 const backgroundChange = function () {
+  if (now > (data.current.sunrise * 1000) && now < (data.current.sunset * 1000) && data.current.temp > 36) {
+    refs.body.style.backgroundImage = `linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(${day_hot})`;
+  }
+  if (now > (data.current.sunrise * 1000) && now < (data.current.sunset * 1000) && data.current.temp < 18) {
+    refs.body.style.backgroundImage = `linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(${day_frost})`;
+  }
+  if (now > (data.current.sunrise * 1000) && now < (data.current.sunset * 1000) && data.current.wind_speed > 18) {
+    refs.body.style.backgroundImage = `linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(${day_gale})`;
+  }
+  if (data.current.wind_speed > 18 && now < (data.current.sunrise * 1000) || now > (data.current.sunset * 1000)) {
+    refs.body.style.backgroundImage = `linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(${night_gale})`;
+  }
+  if (data.current.temp < 0 && now < (data.current.sunrise * 1000) || now > (data.current.sunset * 1000)) {
+    refs.body.style.backgroundImage = `linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(${night_frost})`;
+  }
   if (now > (data.current.sunrise * 1000) && now < (data.current.sunset * 1000)) {
     switch (data.current.weather[0].main) {
       case 'Thunderstorm':
@@ -51,7 +63,7 @@ const backgroundChange = function () {
         refs.body.style.backgroundImage = `linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(${day_fog})`;
         break;
     }
-  };
+  }
 
   if (now < (data.current.sunrise * 1000) || now > (data.current.sunset * 1000)) {
     switch (data.current.weather[0].main) {
