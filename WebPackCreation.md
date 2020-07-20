@@ -393,3 +393,18 @@ npm install react react-dom --save-dev
 ```shell
 npm install prop-types --save-dev
 ```
+
+48. Install eslint:
+
+```shell
+ npm install eslint --save-dev
+```
+
+49. For configure eslint run:
+
+```shell
+./node_modules/.bin/eslint --init
+```
+
+Answer to question, after init you will find config file
+'.eslintrc'

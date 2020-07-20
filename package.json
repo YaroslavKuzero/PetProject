@@ -22,6 +22,8 @@
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-react": "^7.20.3",
     "file-loader": "^6.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "handlebars": "^4.7.6",
@@ -51,5 +53,5 @@
   "bugs": {
     "url": "https://github.com/YaroslavKuzero/PetProject/issues"
   },
-  "homepage": "https://github.com/YaroslavKuzero/PetProject#readme"
+  "homepage": "https://github.com/YaroslavKuzero/PetProject"
 }
