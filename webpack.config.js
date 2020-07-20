@@ -13,7 +13,10 @@ module.exports = env => {
       rules: [
         {
           test: /\.js$/,
-          use: "babel-loader"
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader"
+          },
         },
         {
           test: /\.s[ac]ss$/i,
@@ -87,3 +90,4 @@ module.exports = env => {
       new HtmlWebpackPlugin({ template: './src/index.html', })],
   }
 };
+

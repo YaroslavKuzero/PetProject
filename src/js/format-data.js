@@ -1,33 +1,41 @@
 import data from '../weather-data.json';
-import { getDate, getShortDate, getTime } from './format-time';
+import moment from 'moment';
+
 const currentData = data.current;
 const dailyData = [...data.daily];
 const hourlyData = [...data.hourly];
 
 const current = {
-  dt: `${getDate(Date.now())}`,
-  sunrise: `${getTime(currentData.sunrise * 1000)} LT`,
-  sunset: `${getTime(currentData.sunset * 1000)} LT`,
+  dt: `${moment().format("ddd DD MMMM YYYY")
+    }`,
+  sunrise: `${moment(currentData.sunrise * 1000).format("HH:mm")} LT`,
+  sunset: `${moment(currentData.sunset * 1000).format("HH:mm")} LT`,
+
   temp: `${Math.round(currentData.temp)} ˚C`,
   feels_like: `${Math.round(currentData.feels_like)} ˚C`,
   pressure: `${currentData.pressure} hpa`,
-  humidity: `${currentData.humidity} %`,
-  dew_point: `${currentData.dew_point}`,
+  humidity: `${currentData.humidity} % `,
+  dew_point: `${currentData.dew_point} `,
   visibility: `${currentData.visibility} m`,
-  wind_speed: `${currentData.wind_speed} m/s`,
-  wind_deg: `${currentData.wind_deg}`,
+  wind_speed: `${currentData.wind_speed} m / s`,
+  wind_deg: `${currentData.wind_deg} `,
   weather: {
-    main: `${currentData.weather[0].main}`,
+    main: `${currentData.weather[0].main} `,
     icon: `http://openweathermap.org/img/wn/${currentData.weather[0].icon}@2x.png`,
   }
 }
 
+const formatedjsoncurrent = JSON.stringify(current) //object
+
+
+
 const daily = [];
 dailyData.forEach(item => {
   const dailyItem = {
-    dt: `${getShortDate(item.dt * 1000)}`,
-    sunrise: `${getTime(item.sunrise * 1000)} LT`,
-    sunset: `${getTime(item.sunset * 1000)} LT`,
+    dt: `${moment(item.dt * 1000).format("DD MMMM")}`,
+    sunrise: `${moment(item.sunrise * 1000).format("HH:mm")} LT`,
+    sunset: `${moment(item.sunset * 1000).format("HH:mm")} LT`,
+
     temp: `${Math.round(item.temp.day)} ˚C`,
     feels_like: `${Math.round(item.feels_like.day)} ˚C`,
     pressure: `${item.pressure} hpa`,
@@ -43,14 +51,19 @@ dailyData.forEach(item => {
   daily.push(dailyItem);
 });
 
+const formatedjsondaily = JSON.stringify(daily)  //array of objects
+
+
 const hourly = [];
 hourlyData.forEach(item => {
   item.dt = item.dt * 1000;
   const hourlyItem = {
-    dd: `${getShortDate(item.dt)}`,
-    dt: `${getTime(item.dt)}`,
-    sunrise: `${getTime(item.sunrise)} LT`,
-    sunset: `${getTime(item.sunset)} LT`,
+
+    dd: `${moment(item.dt).format("DD MMMM")}`,
+    dt: `${moment(item.dt).format("HH:mm")}`,
+    sunrise: `${moment(item.sunrise).format("HH:mm")} LT`,
+    sunset: `${moment(item.sunset).format("HH:mm")} LT`,
+
     temp: `${Math.round(item.temp)} ˚C`,
     feels_like: `${Math.round(item.feels_like)} ˚C`,
     pressure: `${item.pressure} hpa`,
@@ -66,5 +79,9 @@ hourlyData.forEach(item => {
 
   hourly.push(hourlyItem);
 })
+
+
+const formatedjsonhourly = JSON.stringify(hourly) //array of objects
+
 
 export { current, daily, hourly };

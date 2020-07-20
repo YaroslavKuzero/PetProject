@@ -1,0 +1,7 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  // grid-template-rows: repeat(12, 1fr);
+  grid-gap: 0.5rem;
+  height: calc(100vh - 4rem);
+}
