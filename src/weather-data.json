@@ -20,7 +20,7 @@
     "weather": [
       {
         "id": 211,
-        "main": "Drizzle",
+        "main": "Clear",
         "description": "thunderstorm",
         "icon": "11d"
       }

@@ -21,7 +21,8 @@ import night_snow from '../images/night_snow.JPG';
 import night_thunderstorm from '../images/night_thunderstorm.JPG';
 
 
-const now = Date.now();
+// const now = 1593741370000;
+const now = Date.now()
 console.log(now);
 const backgroundChange = function () {
   if (now > (data.current.sunrise * 1000) && now < (data.current.sunset * 1000) && data.current.temp > 36) {

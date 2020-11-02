@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './BurgerMenu.scss';
 
+
 class BurgerMenu extends Component {
   constructor(props) {
     super(props);
