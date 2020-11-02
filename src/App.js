@@ -4,9 +4,14 @@ import Container from './components/Container/Container';
 import Current from './components/Current/Current';
 import Daily from './components/Daily/Daily';
 import Hourly from './components/Hourly/Hourly';
-import Header from './components/Header/Header'
+import Header from './components/Header/Header';
+import fetchData from './js/fetch';
 import Favicon from 'react-favicon'
 class App extends Component {
+
+  // componentDidMount() {
+  //   fetchData();
+  // }
 
   render() {
     return (
